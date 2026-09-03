@@ -49,3 +49,48 @@ Based on execution across the benchmark dataset (`workspace/pet_images/`):
     ├── dognames.txt                  # Reference list of valid dog breed names
     ├── pet_images/                   # Benchmark dataset images
     └── run_models_batch.sh           # Shell script for batch execution across architectures
+
+```
+
+## 🛠️ Usage & Setup Instructions
+
+### Prerequisites
+* Python 3.x
+* Git
+
+### Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/robertmokgotho/dog-breed-classifier-cnn.git](https://github.com/robertmokgotho/dog-breed-classifier-cnn.git)
+   cd dog-breed-classifier-cnn
+    ```
+2. **Create and activate a virtual environment:**
+
+    ```Bash
+    python -m venv venv
+    
+    # On macOS/Linux:
+    source venv/bin/activate   
+
+    # On Windows (PowerShell):
+    .\venv\Scripts\Activate.ps1
+    ```
+3. **Install dependencies:**
+
+    ```Bash
+    pip install -r requirements.txt
+    ```
+## Running the Program
+1. **Navigate to the workspace directory:**
+    ```Bash
+    cd workspace
+    ```
+2. **Run check_images.py with your chosen model architecture (vgg, resnet, or alexnet):**
+    ```Bash
+    python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
+    ```
+3. **Or run all models in batch:**
+    ```Bash
+    bash run_models_batch.sh
+    ```
